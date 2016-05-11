@@ -19,7 +19,6 @@
       <groupId>org.junit</groupId>
       <artifactId>junit5-api</artifactId>
       <version>${junit.gen5.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit</groupId>
@@ -32,11 +31,6 @@
       <artifactId>junit5-engine</artifactId>
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>junit5-api</artifactId>
-      <version>${junit.gen5.version}</version>
     </dependency>
 
     <dependency>
@@ -98,7 +92,7 @@
         <enabled>false</enabled>
       </snapshots>
       <name>Central Snapshot Repository</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/org/junit/</url>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </repository>
   </repositories>
 
