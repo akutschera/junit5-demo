@@ -3,6 +3,7 @@ package com.github.akutschera.extension.junit5.p05nested;
 
 import static org.junit.gen5.api.Assertions.assertEquals;
 
+import org.junit.gen5.api.AfterEach;
 import org.junit.gen5.api.BeforeEach;
 import org.junit.gen5.api.DisplayName;
 import org.junit.gen5.api.Nested;
@@ -33,6 +34,10 @@ public class NestedSetupTest {
         void firstLevelSetup() {
             value++;
         }
+
+        @AfterEach
+        @DisplayName( "whatever happens here has no effect on second level tests" )
+        void firstLevelTearDown() { value++; }
 
         @DisplayName("test is run")
         @Test

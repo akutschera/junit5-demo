@@ -2,6 +2,7 @@ package com.github.akutschera.extension.junit5.p07interfaces;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.gen5.api.BeforeEach;
 import org.junit.gen5.api.DisplayName;
 import org.junit.gen5.api.Test;
 
@@ -15,6 +16,11 @@ public interface StorageTestInterface<T> {
     T createObject();
 
     Storage<T> createStorage();
+
+    @BeforeEach
+    default void defaultSetup() {
+        System.out.println("I can even declare my own setup in an interface");
+    }
 
     @Test
     @DisplayName("retrieve must return previously stored object")

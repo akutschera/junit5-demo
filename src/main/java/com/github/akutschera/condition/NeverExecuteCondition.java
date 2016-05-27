@@ -11,7 +11,7 @@ public class NeverExecuteCondition implements ContainerExecutionCondition {
 
     @Override
     public ConditionEvaluationResult evaluate( ContainerExtensionContext context ) {
-        String name = context.getName();
+        String name = context.getDisplayName();
         if ( name.contains( "ContainerConditionTest" ) ) {
             return ConditionEvaluationResult.disabled( "we never execute this test" );
         } else {

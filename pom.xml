@@ -89,7 +89,7 @@
     <repository>
       <id>sonatype-snapshot</id>
       <snapshots>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
       </snapshots>
       <name>Central Snapshot Repository</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
