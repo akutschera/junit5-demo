@@ -2,9 +2,10 @@ package com.github.akutschera.extension.junit5.p07interfaces;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.api.DisplayName;
-import org.junit.gen5.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 
 /** Do <b>not</b> place an interface with the name *Test anywhere.
  * JUnit4 test discovery cannot handle that.

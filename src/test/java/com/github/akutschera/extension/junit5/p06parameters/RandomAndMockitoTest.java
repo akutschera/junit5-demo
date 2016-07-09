@@ -1,13 +1,14 @@
 package com.github.akutschera.extension.junit5.p06parameters;
 
-import static org.junit.gen5.api.Assertions.assertEquals;
-import static org.junit.gen5.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-import org.junit.gen5.api.DisplayName;
-import org.junit.gen5.api.Test;
-import org.junit.gen5.api.extension.ExtendWith;
-import org.junit.gen5.junit4.runner.JUnit5;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 import com.github.akutschera.extension.mockito.InjectMock;
@@ -17,7 +18,7 @@ import com.github.akutschera.extension.random.RandomExtension;
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith( JUnit5.class )
+@RunWith( JUnitPlatform.class )
 @ExtendWith( { MockitoExtension.class, RandomExtension.class} )
 @DisplayName( "When using multiple extensions" )
 public class RandomAndMockitoTest {

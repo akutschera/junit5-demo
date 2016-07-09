@@ -9,27 +9,27 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <spring.core.version>4.2.3.RELEASE</spring.core.version>
-    <junit.gen5.version>5.0.0-SNAPSHOT</junit.gen5.version>
+    <junit.gen5.version>5.0.0-M1</junit.gen5.version>
+    <junit.platform.version>1.0.0-M1</junit.platform.version>
   </properties>
 
   <dependencies>
-    <!-- all the stuff for JUnit5 (lambda) -->
+    <!-- all the stuff for JUnit5 -->
     <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>junit5-api</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.gen5.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>junit4-runner</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>junit5-engine</artifactId>
-      <version>${junit.gen5.version}</version>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-runner</artifactId>
+      <version>${junit.platform.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -44,9 +44,8 @@
       <artifactId>mockito-core</artifactId>
       <version>1.10.19</version>
     </dependency>
-
-
   </dependencies>
+
   <reporting>
     <plugins>
       <plugin>
@@ -75,9 +74,9 @@
         <version>2.19.1</version>
         <dependencies>
           <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>surefire-junit5</artifactId>
-            <version>${junit.gen5.version}</version>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId>
+            <version>${junit.platform.version}</version>
           </dependency>
         </dependencies>
       </plugin>
@@ -93,6 +92,14 @@
       </snapshots>
       <name>Central Snapshot Repository</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>sonatype-releases</id>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <name>Central Snapshot Repository</name>
+      <url>https://oss.sonatype.org/content/repositories/releases/</url>
     </repository>
   </repositories>
 

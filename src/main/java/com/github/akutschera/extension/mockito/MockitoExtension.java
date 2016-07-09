@@ -10,24 +10,22 @@
 
 package com.github.akutschera.extension.mockito;
 
-import java.lang.reflect.Parameter;
-import java.util.Optional;
-
-import org.junit.gen5.api.extension.ExtensionContext;
-import org.junit.gen5.api.extension.ParameterResolutionException;
-import org.junit.gen5.api.extension.ParameterResolver;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.ParameterContext;
+import org.junit.jupiter.api.extension.ParameterResolutionException;
+import org.junit.jupiter.api.extension.ParameterResolver;
 import org.mockito.Mockito;
 
 
 public class MockitoExtension implements ParameterResolver {
 
     @Override
-    public boolean supports( Parameter parameter, Optional<Object> optional, ExtensionContext extensionContext ) throws ParameterResolutionException {
-        return parameter.isAnnotationPresent( InjectMock.class );
+    public boolean supports( ParameterContext parameterContext, ExtensionContext extensionContext ) throws ParameterResolutionException {
+        return parameterContext.getParameter().isAnnotationPresent( InjectMock.class );
     }
 
     @Override
-    public Object resolve( Parameter parameter, Optional<Object> optional, ExtensionContext extensionContext ) throws ParameterResolutionException {
-        return Mockito.mock( parameter.getType() );
+    public Object resolve( ParameterContext parameterContext, ExtensionContext extensionContext ) throws ParameterResolutionException {
+        return Mockito.mock( parameterContext.getParameter().getType() );
     }
 }

@@ -1,20 +1,20 @@
 package com.github.akutschera.extension.junit5.p02assertions;
 
-import static org.junit.gen5.api.Assertions.assertAll;
-import static org.junit.gen5.api.Assertions.assertEquals;
-import static org.junit.gen5.api.Assertions.assertNotNull;
-import static org.junit.gen5.api.Assertions.assertTrue;
-import static org.junit.gen5.api.Assertions.expectThrows;
 
-import org.junit.gen5.api.DisplayName;
-import org.junit.gen5.api.Test;
-import org.junit.gen5.junit4.runner.JUnit5;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith(JUnit5.class)
+@RunWith(JUnitPlatform.class)
 public class JUnitAssertionTest {
 
     @Test
@@ -34,9 +34,9 @@ public class JUnitAssertionTest {
     @Test
     @DisplayName("no more ErrorCollector rule needed")
     void assertAllTest() {
-        assertAll( () -> assertTrue( false, "first test" )
+        assertAll( () -> assertTrue( false, "first test (should fail)" )
                 , () -> assertTrue( true, "second test, should pass" )
-                , () -> assertTrue( false, "third test" ) );
+                , () -> assertTrue( false, "third test (should fail)" ) );
     }
 
 

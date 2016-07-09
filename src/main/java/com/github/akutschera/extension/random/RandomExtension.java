@@ -1,26 +1,27 @@
 package com.github.akutschera.extension.random;
 
-import java.lang.reflect.Parameter;
-import java.util.Optional;
 import java.util.Random;
 
-import org.junit.gen5.api.extension.ExtensionContext;
-import org.junit.gen5.api.extension.ParameterResolutionException;
-import org.junit.gen5.api.extension.ParameterResolver;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.ParameterContext;
+import org.junit.jupiter.api.extension.ParameterResolutionException;
+import org.junit.jupiter.api.extension.ParameterResolver;
+
 
 /**
- * Created by Andreas Kutschera on 19.04.16.
+ * Created by Andreas Kutschera.
  */
 public class RandomExtension implements ParameterResolver {
 
     @Override
-    public boolean supports( Parameter parameter, Optional<Object> optional, ExtensionContext
-            extensionContext ) throws ParameterResolutionException {
-        return parameter.getType().equals( Boolean.class );
+    public boolean supports( ParameterContext parameterContext, ExtensionContext extensionContext ) throws
+            ParameterResolutionException {
+        return parameterContext.getParameter().getType().equals( Boolean.class );
     }
 
     @Override
-    public Object resolve( Parameter parameter,Optional<Object> optional, ExtensionContext extensionContext ) throws ParameterResolutionException {
+    public Object resolve( ParameterContext parameterContext, ExtensionContext extensionContext ) throws
+            ParameterResolutionException {
         return new Random().nextBoolean();
     }
 }

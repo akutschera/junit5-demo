@@ -1,17 +1,17 @@
 package com.github.akutschera.extension.junit5.p01annotations;
 
-import org.junit.gen5.api.AfterAll;
-import org.junit.gen5.api.AfterEach;
-import org.junit.gen5.api.BeforeAll;
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.api.Test;
-import org.junit.gen5.junit4.runner.JUnit5;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith(JUnit5.class)
+@RunWith(JUnitPlatform.class)
 public class BeforeAndAfterTest {
 
     @BeforeAll

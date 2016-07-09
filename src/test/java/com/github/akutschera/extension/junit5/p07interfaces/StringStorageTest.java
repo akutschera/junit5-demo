@@ -1,13 +1,13 @@
 package com.github.akutschera.extension.junit5.p07interfaces;
 
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.junit4.runner.JUnit5;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith( JUnit5.class )
+@RunWith( JUnitPlatform.class )
 public class StringStorageTest implements StorageTestInterface<String> {
 
     private String testString;

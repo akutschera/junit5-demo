@@ -1,17 +1,18 @@
 package com.github.akutschera.extension.junit5.p04disabled;
 
-import static org.junit.gen5.api.Assertions.assertTrue;
-import static org.junit.gen5.api.Assertions.fail;
 
-import org.junit.gen5.api.Disabled;
-import org.junit.gen5.api.Test;
-import org.junit.gen5.junit4.runner.JUnit5;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith( JUnit5.class )
+@RunWith( JUnitPlatform.class )
 public class DisabledTest {
 
     @Test

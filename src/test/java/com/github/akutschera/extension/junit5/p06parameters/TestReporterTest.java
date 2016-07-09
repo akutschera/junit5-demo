@@ -2,19 +2,19 @@ package com.github.akutschera.extension.junit5.p06parameters;
 
 import java.util.HashMap;
 
-import org.junit.gen5.api.AfterEach;
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.api.DisplayName;
-import org.junit.gen5.api.Test;
-import org.junit.gen5.api.TestInfo;
-import org.junit.gen5.api.TestReporter;
-import org.junit.gen5.junit4.runner.JUnit5;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.TestReporter;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith(JUnit5.class)
+@RunWith(JUnitPlatform.class)
 public class TestReporterTest {
 
     HashMap<String, String> values;

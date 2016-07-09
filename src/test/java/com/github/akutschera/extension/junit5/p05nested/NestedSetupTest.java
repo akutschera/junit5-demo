@@ -1,21 +1,21 @@
 package com.github.akutschera.extension.junit5.p05nested;
 
 
-import static org.junit.gen5.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.gen5.api.AfterEach;
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.api.DisplayName;
-import org.junit.gen5.api.Nested;
-import org.junit.gen5.api.Test;
-import org.junit.gen5.junit4.runner.JUnit5;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
 
-@RunWith(JUnit5.class)
+@RunWith(JUnitPlatform.class)
 @DisplayName("Example for p05nested setup tests: ")
 public class NestedSetupTest {
 

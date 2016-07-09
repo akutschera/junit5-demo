@@ -1,8 +1,8 @@
 package com.github.akutschera.condition;
 
-import org.junit.gen5.api.extension.ConditionEvaluationResult;
-import org.junit.gen5.api.extension.ContainerExecutionCondition;
-import org.junit.gen5.api.extension.ContainerExtensionContext;
+import org.junit.jupiter.api.extension.ConditionEvaluationResult;
+import org.junit.jupiter.api.extension.ContainerExecutionCondition;
+import org.junit.jupiter.api.extension.ContainerExtensionContext;
 
 /**
  * Created by Andreas Kutschera.
