@@ -5,13 +5,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith(JUnitPlatform.class)
 public class BeforeAndAfterTest {
 
     @BeforeAll

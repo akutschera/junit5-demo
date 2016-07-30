@@ -8,8 +8,6 @@ import static org.mockito.Mockito.when;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
 
 import com.github.akutschera.extension.mockito.InjectMock;
 import com.github.akutschera.extension.mockito.MockitoExtension;
@@ -18,7 +16,6 @@ import com.github.akutschera.extension.random.RandomExtension;
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith( JUnitPlatform.class )
 @ExtendWith( { MockitoExtension.class, RandomExtension.class} )
 @DisplayName( "When using multiple extensions" )
 public class RandomAndMockitoTest {

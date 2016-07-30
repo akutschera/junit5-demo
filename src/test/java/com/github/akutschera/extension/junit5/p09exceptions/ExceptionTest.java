@@ -9,13 +9,10 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
-@RunWith(JUnitPlatform.class)
 public class ExceptionTest {
 
     @Test

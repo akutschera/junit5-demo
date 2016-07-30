@@ -8,14 +8,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
 
 /**
  * Created by Andreas Kutschera.
  */
 
-@RunWith(JUnitPlatform.class)
 @DisplayName("Example for p05nested setup tests: ")
 public class NestedSetupTest {
 
