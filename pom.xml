@@ -9,9 +9,9 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <junit.gen5.version>5.0.0-M2</junit.gen5.version>
-    <junit.platform.version>1.0.0-M2</junit.platform.version>
-    <junit.platform.surefire.provider.version>1.0.0-M1</junit.platform.surefire.provider.version>
+    <junit.gen5.version>5.0.0-M3</junit.gen5.version>
+    <junit.platform.version>1.0.0-M3</junit.platform.version>
+    <junit.platform.surefire.provider.version>1.0.0-M3</junit.platform.surefire.provider.version>
   </properties>
 
   <dependencies>
@@ -86,14 +86,6 @@
   </build>
 
   <repositories>
-    <repository>
-      <id>sonatype-snapshot</id>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <name>Central Snapshot Repository</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </repository>
     <repository>
       <id>sonatype-releases</id>
       <snapshots>
