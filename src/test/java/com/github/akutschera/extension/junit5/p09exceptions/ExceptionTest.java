@@ -3,7 +3,6 @@ package com.github.akutschera.extension.junit5.p09exceptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.expectThrows;
 
 import java.util.ArrayList;
 
@@ -18,7 +17,7 @@ public class ExceptionTest {
     @Test
     @DisplayName( "catch an exception and assert something it should contain or be" )
     void exceptionTesting() {
-        IndexOutOfBoundsException exception = expectThrows( IndexOutOfBoundsException.class, this::throwException );
+        IndexOutOfBoundsException exception = assertThrows( IndexOutOfBoundsException.class, this::throwException );
         assertEquals( "Index: 1, Size: 0", exception.getMessage() );
     }
 
