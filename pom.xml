@@ -9,9 +9,9 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <junit.gen5.version>5.0.0-M3</junit.gen5.version>
-    <junit.platform.version>1.0.0-M3</junit.platform.version>
-    <junit.platform.surefire.provider.version>1.0.0-M3</junit.platform.surefire.provider.version>
+    <junit.gen5.version>5.0.0-M4</junit.gen5.version>
+    <junit.platform.version>1.0.0-M4</junit.platform.version>
+    <junit.platform.surefire.provider.version>1.0.0-M4</junit.platform.surefire.provider.version>
   </properties>
 
   <dependencies>
@@ -24,6 +24,12 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.gen5.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
     </dependency>
