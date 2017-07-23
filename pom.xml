@@ -9,9 +9,9 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <junit.gen5.version>5.0.0-M4</junit.gen5.version>
-    <junit.platform.version>1.0.0-M4</junit.platform.version>
-    <junit.platform.surefire.provider.version>1.0.0-M4</junit.platform.surefire.provider.version>
+    <junit.gen5.version>5.0.0-M6</junit.gen5.version>
+    <junit.platform.version>1.0.0-M6</junit.platform.version>
+    <junit.platform.surefire.provider.version>1.0.0-M6</junit.platform.surefire.provider.version>
   </properties>
 
   <dependencies>

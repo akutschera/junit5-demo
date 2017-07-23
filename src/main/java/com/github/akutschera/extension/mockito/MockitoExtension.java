@@ -20,12 +20,12 @@ import org.mockito.Mockito;
 public class MockitoExtension implements ParameterResolver {
 
     @Override
-    public boolean supports( ParameterContext parameterContext, ExtensionContext extensionContext ) throws ParameterResolutionException {
+    public boolean supportsParameter( ParameterContext parameterContext, ExtensionContext extensionContext ) throws ParameterResolutionException {
         return parameterContext.getParameter().isAnnotationPresent( InjectMock.class );
     }
 
     @Override
-    public Object resolve( ParameterContext parameterContext, ExtensionContext extensionContext ) throws ParameterResolutionException {
+    public Object resolveParameter( ParameterContext parameterContext, ExtensionContext extensionContext ) throws ParameterResolutionException {
         return Mockito.mock( parameterContext.getParameter().getType() );
     }
 }

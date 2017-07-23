@@ -13,7 +13,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ObjectArrayArguments;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.opentest4j.AssertionFailedError;
 
@@ -51,7 +50,7 @@ public class ParameterizedAnnotationTest {
     }
 
     @ParameterizedTest
-    @MethodSource(names = "paramsProvider")
+    @MethodSource( "paramsProvider")
     @CsvSource(delimiter = '|', value = {
             "3 | 3",
             "4 | 4"
@@ -63,8 +62,8 @@ public class ParameterizedAnnotationTest {
 
     static List<Arguments> paramsProvider() {
         List<Arguments> arguments = new ArrayList<>( 2 );
-        arguments.add( ObjectArrayArguments.create( 1, "1" ) );
-        arguments.add( ObjectArrayArguments.create( 2, "2" ) );
+        arguments.add( Arguments.of( 1, "1" ) );
+        arguments.add( Arguments.of( 2, "2" ) );
         return arguments;
     }
 

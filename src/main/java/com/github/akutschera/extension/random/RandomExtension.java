@@ -14,13 +14,13 @@ import org.junit.jupiter.api.extension.ParameterResolver;
 public class RandomExtension implements ParameterResolver {
 
     @Override
-    public boolean supports( ParameterContext parameterContext, ExtensionContext extensionContext ) throws
+    public boolean supportsParameter( ParameterContext parameterContext, ExtensionContext extensionContext ) throws
             ParameterResolutionException {
         return parameterContext.getParameter().getType().equals( Boolean.class );
     }
 
     @Override
-    public Object resolve( ParameterContext parameterContext, ExtensionContext extensionContext ) throws
+    public Object resolveParameter( ParameterContext parameterContext, ExtensionContext extensionContext ) throws
             ParameterResolutionException {
         return new Random().nextBoolean();
     }
