@@ -9,9 +9,9 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <junit.gen5.version>5.0.0-M6</junit.gen5.version>
-    <junit.platform.version>1.0.0-M6</junit.platform.version>
-    <junit.platform.surefire.provider.version>1.0.0-M6</junit.platform.surefire.provider.version>
+    <junit.gen5.version>5.0.0-RC3</junit.gen5.version>
+    <junit.platform.version>1.0.0-RC3</junit.platform.version>
+    <junit.platform.surefire.provider.version>1.0.0-RC3</junit.platform.surefire.provider.version>
   </properties>
 
   <dependencies>
@@ -23,13 +23,14 @@
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
+      <artifactId>junit-jupiter-params</artifactId>
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- needed because my IDE does not support JUnit Jupiter fully yet -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
+      <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
     </dependency>
@@ -39,11 +40,12 @@
       <version>${junit.platform.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- end of extra dependencies for my IDE to work -->
 
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.4.0</version>
+      <version>3.8.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -84,6 +86,11 @@
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-surefire-provider</artifactId>
             <version>${junit.platform.surefire.provider.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.0.0-RC3</version>
           </dependency>
         </dependencies>
       </plugin>
