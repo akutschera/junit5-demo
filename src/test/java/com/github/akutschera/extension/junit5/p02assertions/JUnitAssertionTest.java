@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -30,6 +31,7 @@ public class JUnitAssertionTest {
 
     @Test
     @DisplayName("no more ErrorCollector rule needed")
+    @Tag("may-fail")
     void assertAllTest() {
         assertAll( () -> assertTrue( false, "first test (should fail)" )
                 , () -> assertTrue( true, "second test, should pass" )

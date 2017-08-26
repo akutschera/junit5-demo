@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -18,6 +18,7 @@ import com.github.akutschera.extension.random.RandomExtension;
 /**
  * Created by Andreas Kutschera.
  */
+@Tag( "may-fail" )
 public class ExtensionTest {
 
     //    @ExtendWith( RandomExtension.class )
@@ -27,7 +28,6 @@ public class ExtensionTest {
     @Test
     @DisplayName("we can use an extension on the field level")
     @ExtendWith(RandomExtension.class)
-    @Disabled("wait until M4 comes out")
     void useExtensionOnField() {
         assertAll( () -> Assertions.assertTrue( fieldWithExtension1, "failed because 1st random boolean is false" ),
                    () -> Assertions.assertTrue( fieldWithExtension2, "failed because 2nd random boolean is false" )

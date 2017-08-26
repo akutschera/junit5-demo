@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -14,6 +15,7 @@ import com.github.akutschera.extension.random.RandomExtension;
  * Created by Andreas Kutschera.
  */
 @ExtendWith(RandomExtension.class)
+@Tag("may-fail")
 public class RandomExampleTest {
 
     @Test
