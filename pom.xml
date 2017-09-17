@@ -9,9 +9,9 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <junit.gen5.version>5.0.0-RC3</junit.gen5.version>
-    <junit.platform.version>1.0.0-RC3</junit.platform.version>
-    <junit.platform.surefire.provider.version>1.0.0-RC3</junit.platform.surefire.provider.version>
+    <junit.gen5.version>5.0.0</junit.gen5.version>
+    <junit.platform.version>1.0.0</junit.platform.version>
+    <junit.platform.surefire.provider.version>1.0.0</junit.platform.surefire.provider.version>
   </properties>
 
   <dependencies>

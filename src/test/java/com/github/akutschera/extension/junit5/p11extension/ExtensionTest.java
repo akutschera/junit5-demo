@@ -21,20 +21,6 @@ import com.github.akutschera.extension.random.RandomExtension;
 @Tag( "may-fail" )
 public class ExtensionTest {
 
-    //    @ExtendWith( RandomExtension.class )
-    Boolean fieldWithExtension1;
-    Boolean fieldWithExtension2;
-
-    @Test
-    @DisplayName("we can use an extension on the field level")
-    @ExtendWith(RandomExtension.class)
-    void useExtensionOnField() {
-        assertAll( () -> Assertions.assertTrue( fieldWithExtension1, "failed because 1st random boolean is false" ),
-                   () -> Assertions.assertTrue( fieldWithExtension2, "failed because 2nd random boolean is false" )
-        );
-    }
-
-
     @Test
     @DisplayName("we can use an extension on the method level")
     @ExtendWith(RandomExtension.class)
