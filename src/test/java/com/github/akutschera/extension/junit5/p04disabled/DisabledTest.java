@@ -20,6 +20,6 @@ public class DisabledTest {
     @Test
     @Disabled
     void doNotRun() {
-        fail( "this test should not be run because it is p04disabled" );
+        fail( "this test should not be run because it is disabled" );
     }
 }
