@@ -27,7 +27,7 @@ public class TestInstancePerMethodTest {
     }
 
     @Test
-    @DisplayName("@Test can be used in testInstance per class")
+    @DisplayName("@Test can be used in testInstance per method")
     void aaaExecuteLaterBecauseOfExecutionOrder() {
         assertThat( numberOfExecutions ).isEqualTo( 0 );
     }

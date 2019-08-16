@@ -18,7 +18,7 @@ public class ExceptionTest {
     @DisplayName( "catch an exception and assert something it should contain or be" )
     void exceptionTesting() {
         IndexOutOfBoundsException exception = assertThrows( IndexOutOfBoundsException.class, this::throwException );
-        assertEquals( "Index: 1, Size: 0", exception.getMessage() );
+        assertEquals( "Index 1 out of bounds for length 0", exception.getMessage() );
     }
 
     @Test
