@@ -9,9 +9,8 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <junit.gen5.version>5.0.1</junit.gen5.version>
-    <junit.platform.version>1.0.1</junit.platform.version>
-    <junit.platform.surefire.provider.version>1.0.1</junit.platform.surefire.provider.version>
+    <junit.gen5.version>5.5.1</junit.gen5.version>
+    <assertj-core.version>3.13.2</assertj-core.version>
   </properties>
 
   <dependencies>
@@ -27,42 +26,31 @@
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
     </dependency>
-    <!-- needed because my IDE does not support JUnit Jupiter fully yet -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.gen5.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-runner</artifactId>
-      <version>${junit.platform.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- end of extra dependencies for my IDE to work -->
 
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.8.0</version>
+      <version>${assertj-core.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>1.10.19</version>
+      <version>3.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>3.0.0</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </reporting>
 
   <build>
 
@@ -72,22 +60,15 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.19.1</version>
-        <dependencies>
-          <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-surefire-provider</artifactId>
-            <version>${junit.platform.surefire.provider.version}</version>
-          </dependency>
-        </dependencies>
+        <version>2.22.2</version>
       </plugin>
     </plugins>
 
@@ -101,14 +82,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.19.1</version>
-            <dependencies>
-              <dependency>
-                <groupId>org.junit.platform</groupId>
-                <artifactId>junit-platform-surefire-provider</artifactId>
-                <version>${junit.platform.surefire.provider.version}</version>
-              </dependency>
-            </dependencies>
+            <version>2.22.2</version>
             <configuration>
               <properties>
                 <excludeTags>may-fail</excludeTags>
